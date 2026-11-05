@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How Hot Will It Get?</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>How Hot Will It Get? Two Climate Futures, 1850–2100</h1>
+      <p class="subtitle">
+        Annual global-mean near-surface air temperature, shown as the change from the
+        1850–1900 average. Monthly model output is area-weighted (cos latitude) and averaged
+        into one value per year. Source: CMIP6, NOAA-GFDL GFDL-ESM4 (run r1i1p1f1).
+      </p>
+    </header>
+
+    <div class="controls" role="group" aria-label="Scenario">
+      <span class="controls-label">Scenario:</span>
+      <button data-scenario="both" class="active">Compare both</button>
+      <button data-scenario="ssp126">SSP1-2.6 · low emissions</button>
+      <button data-scenario="ssp585">SSP5-8.5 · high emissions</button>
+    </div>
+
+    <div id="chart"></div>
+    <div id="tooltip" class="tooltip" hidden></div>
+
+    <p class="note">
+      Hover over the chart to read exact values. Gray = simulated past (historical run, 1850–2014);
+      colored lines = projections under each emissions pathway (2015–2100).
+    </p>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
